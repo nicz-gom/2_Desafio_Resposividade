@@ -1,0 +1,268 @@
+*{
+    padding: 0;
+    margin:  0;
+    
+    font-family: "Ubunto", sans-serif;
+}
+
+body{
+    /*Color Pallet*/
+    --backgroug-rigth: #0056fb;
+    --backgroud-left: #ffffff;
+    --text-and-border: #000000;
+    --buttons: #0056fb;
+    /*End Color Pallet*/
+
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+}
+
+/*LEFT*/
+
+.section-left{
+    flex: 1;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--backgroud-left);
+}
+
+.section-left .title-login{
+    width: 65%;
+    text-align: start;
+}
+
+.section-left .title-login h1{  
+    margin-bottom: 23px;
+}
+
+.section-left .data-register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+.section-left .data-register input::placeholder{
+    color: var(--text-and-border);
+    font-size: 11.70px;
+
+    padding-left: 7px;
+}
+
+.section-left .data-register input[type="email"], input[type="password"], input[type="submit"], input[type="text"] {
+    width: 65%;
+    height: 30px;
+    border-radius: 5px;
+
+    background-color: var(--backgroud-left);
+    border: 1px solid var(--text-and-border);
+
+    transition: 0.5s;
+}
+
+.section-left .data-register input[type="submit"]{
+    border: none;
+
+    background-color: var(--backgroug-rigth);
+    color: var(--backgroud-left);
+
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.section-left .data-register .button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 80px;
+    padding-left: 6%;
+}
+
+.section-left .data-register .button img{
+    z-index: 1;
+
+    width: 50px;
+
+    position: relative;
+    top: 20%;
+    right: 3.5%;
+}
+
+.section-left .data-register .button input[type="submit"]:hover{
+    z-index: 6;
+
+    width: 80%;
+
+    transform: scale(1.07);
+}
+
+.section-left .data-register .terms{
+    display: flex;
+    align-items: center;
+    justify-content:  start;
+
+    z-index: 6;
+
+    width: 65%;
+}
+
+.section-left .data-register .terms input[type="checkbox"]{
+    width: 16px; 
+
+    transition: 0.5s;
+}
+
+.section-left .data-register .terms p{
+    padding: 5px;
+
+    font-size: small;
+}
+
+.section-left .for-new-user{
+    display: flex;
+    width: 65%;
+}
+
+.section-left .for-new-user p{
+    color: var(--text-and-border);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.section-left .for-new-user a{
+    color: var(--text-and-border);
+    font-size: 14px;
+    text-decoration: none;
+
+    margin-left: 5px;
+}
+
+.section-left .for-user{
+    margin-top: 15px;
+    display: flex;
+    width: 65%;
+}
+
+.section-left .for-user p{
+    color: var(--text-and-border);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.section-left .for-user a{
+    color: var(--text-and-border);
+    font-size: 14px;
+    text-decoration: none;
+
+    margin-left: 5px;
+}
+
+/*END LEFT*/
+
+/*RIGHT*/
+
+.section-right{
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--backgroug-rigth);
+}
+
+.section-right .advertising img{
+    max-height: 100%;
+    width: 90%;
+}
+
+.section-right .title-advertising{
+    width: 80%;
+}
+
+.section-right .title-advertising h1{
+    color: var(--backgroud-left);
+
+    font-size: 50px;
+    margin: 10px 0;
+}
+
+.section-right .illustrative-text{
+    width: 80%;
+}
+
+.section-right .illustrative-text p{
+    color: var(--backgroud-left);
+}
+
+/*END RIGHT*/
+
+@media (max-width: 790px){
+    .section-left .data-register .button img{
+        right: 6%;
+    }
+}
+
+@media (max-width: 670px){
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*LEFT/TOP START*/
+    .section-left{
+        margin: 60px 0;
+    }
+    /*LEFT/TOP END*/
+
+    /*RIGHT/BOTTOM START*/
+    .section-right .advertising {
+        margin: 60px auto;
+    }
+
+    .section-right .title-advertising{
+        margin-bottom: 60px;
+    }
+
+    .section-right .title-advertising h1{
+        font-size: 40px;
+    }
+
+    .section-right .illustrative-text{
+        margin-bottom: 60px;
+    }
+    /*RIGHT/BOTTOM END*/
+}
+
+@media (max-width: 320px){
+    .section-left .title-login{
+        width: 100%;
+    }
+
+    .section-left .title-login h1{
+        text-align: center;
+    }
+
+    .section-left .data-register input[type="email"], input[type="password"], input[type="submit"], input[type="text"]{
+        width: 80%;
+    }
+
+    .section-left .data-register .terms{
+        width: 80%;
+    }
+
+    .section-left .for-new-user{
+        width: 80%;
+    }
+}
